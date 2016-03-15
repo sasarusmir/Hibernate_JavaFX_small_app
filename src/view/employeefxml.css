@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.label{
+    -fx-text-alignment:center;
+    -fx-padding: 5px; 
+    -fx-margin: 20px;
+}
+
+.hbox{
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+}
+
+.button{
+    -fx-margin: 20px;
+}
+
+#titleLabel, #titleAllLabel, #titleCriteriumLabel{
+    -fx-font-size: 20px;
+}
+
+#scrollPane, #scrollPaneCriterium{
+    -fx-background-color:transparent;
+}

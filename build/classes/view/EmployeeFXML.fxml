@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox  id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeController">
+    <stylesheets>
+        <URL value="@employeefxml.css"/>
+    </stylesheets>
+    <children>
+        <VBox spacing="10">
+            <children>
+                <Label fx:id="titleLabel" text="Add new Employee:"/> 
+                <HBox >
+                    <children>
+                        <Label fx:id="newNameLabel" text="Name: "/>  
+                        <TextField fx:id="newNameTextField" promptText="Name"/>  
+                    </children>
+                </HBox>
+                <HBox >
+                    <children>
+                        <Label fx:id="newAgeLabel" text="Age: "/>  
+                        <util.NumberTextField fx:id="newAgeNumberTextField" promptText="Age"/>  
+                    </children>
+                </HBox>
+                <HBox >
+                    <children>
+                        <Label fx:id="newAddressLabel" text="Address: "/>  
+                        <TextField fx:id="newAddressTextField" promptText="Address"/>  
+                    </children>
+                </HBox>
+                <HBox >
+                    <children>
+                        <Label fx:id="newIncomeLabel" text="Income: "/>  
+                        <util.NumberTextField fx:id="newIncomeNumberTextField" promptText="Income"/>  
+                    </children>
+                </HBox>
+            
+            
+                <HBox >
+                    <children>
+                        <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveEmployee" text="Save">
+                            <HBox.margin>
+                                <javafx.geometry.Insets >
+                                    <left>20</left>
+                                </javafx.geometry.Insets>
+                            </HBox.margin>
+                        </Button>  
+                        <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearEmployee" text="Clear">
+                            <HBox.margin>
+                                <javafx.geometry.Insets >
+                                    <left>20</left>
+                                </javafx.geometry.Insets>
+                            </HBox.margin>
+                        </Button>  
+                    </children>
+                </HBox>
+            </children>
+        </VBox> 
+        
+        
+        <ScrollPane fitToWidth="true" fx:id="scrollPane" >
+            <VBox fx:id="allEmployeesVbox" >
+                <padding>
+                    <javafx.geometry.Insets >
+                        <left>20</left>
+                    </javafx.geometry.Insets>
+                </padding>
+                <children>
+                    
+                </children>
+            </VBox> 
+        </ScrollPane>
+        
+        <ScrollPane fitToWidth="true" fx:id="scrollPaneCriterium" >
+            <VBox  >
+                <padding>
+                    <javafx.geometry.Insets >
+                        <left>20</left>
+                    </javafx.geometry.Insets>
+                </padding>
+                <children>
+                    <Label fx:id="titleCriteriumLabel"  text="All Employees with criterium: " />
+                    <HBox >
+                        <children>
+                            <ChoiceBox fx:id="criteriumChoiceBox">
+                                <value>name</value>
+                            </ChoiceBox>
+                            <TextField fx:id="criteriumTextField" promptText="Criterium"/>  
+                            <Button mnemonicParsing="false" onAction="#showEmployeeCriterium"   text="Show" /> 
+                        </children>
+                    </HBox>
+                    <VBox fx:id="criteriumEmployeesVbox">
+                        
+                    </VBox>
+                </children>
+            </VBox> 
+        </ScrollPane>
+    </children>
+</HBox>
